@@ -1,0 +1,11 @@
+W:\source\milestone-merger\src\milestone-merger-console\obj\Debug\netcoreapp2.2\milestone-merger-console.csprojAssemblyReference.cache
+W:\source\milestone-merger\src\milestone-merger-console\obj\Debug\netcoreapp2.2\milestone-merger-console.csproj.CoreCompileInputs.cache
+W:\source\milestone-merger\src\milestone-merger-console\obj\Debug\netcoreapp2.2\milestone-merger-console.AssemblyInfoInputs.cache
+W:\source\milestone-merger\src\milestone-merger-console\obj\Debug\netcoreapp2.2\milestone-merger-console.AssemblyInfo.cs
+W:\source\milestone-merger\src\milestone-merger-console\bin\Debug\netcoreapp2.2\milestone-merger-console.deps.json
+W:\source\milestone-merger\src\milestone-merger-console\bin\Debug\netcoreapp2.2\milestone-merger-console.runtimeconfig.json
+W:\source\milestone-merger\src\milestone-merger-console\bin\Debug\netcoreapp2.2\milestone-merger-console.runtimeconfig.dev.json
+W:\source\milestone-merger\src\milestone-merger-console\bin\Debug\netcoreapp2.2\milestone-merger-console.dll
+W:\source\milestone-merger\src\milestone-merger-console\bin\Debug\netcoreapp2.2\milestone-merger-console.pdb
+W:\source\milestone-merger\src\milestone-merger-console\obj\Debug\netcoreapp2.2\milestone-merger-console.dll
+W:\source\milestone-merger\src\milestone-merger-console\obj\Debug\netcoreapp2.2\milestone-merger-console.pdb
