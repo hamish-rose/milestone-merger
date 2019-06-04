@@ -1,27 +1,35 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using milestone_merger_console.GitLabClient;
 using Microsoft.Extensions.Hosting;
+using McMaster.Extensions.CommandLineUtils;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace milestone_merger_console
 {
     public class Program
     {
-        public static async Task Main(string[] args)
+        public static Task<int> Main(string[] args)
         {
-
-            var host = new HostBuilder()
-                            .ConfigureServices((hostContext, services) =>
-                            {
-                                
-                            });
-
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://gitlab.com/api/v4/");
-            client.DefaultRequestHeaders.Add("Private-Token", "JQyH2VgS_AVoVcpSGCiq");
-
-            var response = await client.GetStringAsync("groups");
-            Console.WriteLine(response);
+            return new HostBuilder()
+            .ConfigureLogging((services, builder) =>
+            {
+                builder.AddConsole();
+                builder.AddConfiguration(services.Configuration.GetSection("logging"));
+            })
+            .ConfigureAppConfiguration(configHost =>
+            {
+                configHost.AddJsonFile("appsettings.json", optional: false);
+            })
+            .ConfigureServices((context, services) =>
+            {
+                services.AddHttpClient<IGitLabService, GitLabService>();
+            })
+            .RunCommandLineApplicationAsync<MilestoneMerger>(args);
         }
     }
 }
+
